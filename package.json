@@ -1,0 +1,26 @@
+{
+  "name": "n-queens-simulated-annealing",
+  "version": "1.0.0",
+  "description": "N-queens-Simulated-Annealing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YellowFlash525/N-queens-Simulated-Annealing.git"
+  },
+  "keywords": [
+    "SA",
+    "JS"
+  ],
+  "author": "Kamil Wojcik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YellowFlash525/N-queens-Simulated-Annealing/issues"
+  },
+  "homepage": "https://github.com/YellowFlash525/N-queens-Simulated-Annealing#readme",
+  "devDependencies": {
+    "lodash": "^4.17.10"
+  }
+}
