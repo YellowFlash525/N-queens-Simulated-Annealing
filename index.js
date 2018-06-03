@@ -9,23 +9,23 @@ class SimulatedAnnealing extends NQueen {
 		this.currentState = new SimulatedAnnealingState(matrixSize);
 	}
 	solve () {
-		while(!this.isSolvedPosition(this.currentState)) {
-			let temperature, delta, probability, rand;
-			// temperatura obniżana z każdą iteracją o 1
-			for (temperature = this.temperature; (temperature > 0) && (this.currentState.getCost() != 0); temperature--) {
-				this.nextState = this.currentState.getNextState();
-				delta = this.currentState.getCost() - this.nextState.getCost();
-				// zmiana prawdopdobienstwa
-				probability = Math.exp(delta / temperature);
-				rand = Math.random();
+    while(!this.isSolvedPosition(this.currentState)) {
+      let temperature, delta, probability, rand;
+      // temperatura obniżana z każdą iteracją o 1
+      for (temperature = this.temperature; (temperature > 0) && (this.currentState.getCost() != 0); temperature--) {
+        this.nextState = this.currentState.getNextState();
+        delta = this.currentState.getCost() - this.nextState.getCost();
+        // zmiana prawdopdobienstwa
+        probability = Math.exp(delta / temperature);
+        rand = Math.random();
 
-				if (delta > 0) {
-					this.currentState = this.nextState;
-				} else if (rand <= probability) {
-					this.currentState = this.nextState;
-				}
-			}
-		}
+        if (delta > 0) {
+          this.currentState = this.nextState;
+        } else if (rand <= probability) {
+          this.currentState = this.nextState;
+        }
+      }
+    }
 	}
 }
 
